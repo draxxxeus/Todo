@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    haml (4.0.6)
+      tilt
     mysql (2.9.1)
     rack (1.5.2)
     rack-protection (1.5.2)
@@ -17,6 +19,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (= 1.6.0)
+  haml (= 4.0.6)
   mysql (= 2.9.1)
   sequel (= 4.9.0)
   sinatra (= 1.4.4)
