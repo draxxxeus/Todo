@@ -104,8 +104,10 @@ get '/signup/?' do
 end
 
 post '/signup/?' do
-  md5sum = Digest::Md5.hexdigest params[:password]
+  md5sum = Digest::MD5.hexdigest params[:password]
   User.create(name: params[:name], password: md5sum)
+
+  haml :login
 end
 
 get '/login/?' do
