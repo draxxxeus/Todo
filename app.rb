@@ -12,7 +12,7 @@ class Todo < Sinatra::Application
 end
 
 before do
-  if not request.path_info.split('/')[1] == 'login' and session[:user_id].nil?
+  if not ['login', 'signup'].include? request.path_info.split('/')[1]  and session[:user_id].nil?
     redirect '/login'
   end
 end
